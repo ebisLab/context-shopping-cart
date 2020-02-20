@@ -11,10 +11,13 @@ function App() {
 	const [products] = useState(data);
 	const [cart, setCart] = useState([]);
 
-	const addItem = item => {
+	const addItem = (item, e) => {
 		// add the given item to the cart
+		console.log('Cliecked on the add Item')
+		console.log(item)
+		setCart([...cart, item])
 	};
-
+console.log(products, 'products')
 	return (
 		<div className="App">
 			<Navigation cart={cart} />
